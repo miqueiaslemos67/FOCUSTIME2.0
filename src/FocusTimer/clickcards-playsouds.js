@@ -6,7 +6,7 @@ export function playSound(soundFile) {
 
 // Mapeamento de sons para os IDs dos cartões
 const soundMap = {
-  forest: "./FOCUSTIME2.0/assets/Floresta.wav",
+  forest: "./assets/Floresta.wav",
   rain: "./assets/chuva.wav",
   coffee: "./assets/Cafeteria.wav",
   fireplace: "./assets/Lareira.wav",
