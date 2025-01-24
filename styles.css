@@ -1,0 +1,131 @@
+@charset "UTF-08";
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(62.5%);
+}
+
+body {
+  background-color: whitesmoke;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  color: #333;
+}
+
+.container-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3.125rem; /* 50px */
+}
+
+.flex {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.controls {
+  display: flex;
+  justify-content: center; /* Alinha os botões horizontalmente no centro */
+  align-items: center; /* Alinha os botões verticalmente no meio */
+  gap: 1rem; /* Espaçamento entre os botões */
+  margin-top: 1.25rem; /* 20px */
+}
+
+#stop.btn,
+#play.btn {
+  display: flex;
+  font-size: 2rem;
+}
+
+#increase,
+#decrease {
+  display: flex;
+  font-size: 4rem;
+  font-weight: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+#decrease {
+  padding-bottom: 0.3125rem; /* 0.5rem */
+}
+
+.btn {
+  background: none;
+  border: 0.125rem solid #333; /* 2px */
+  border-radius: 50%; /* Botões redondos */
+  width: 3.75rem; /* 60px */
+  height: 3.75rem; /* 60px */
+  display: flex;
+  justify-content: center; /* Centraliza o ícone no botão */
+  align-items: center; /* Centraliza o ícone no botão */
+  font-size: 1.8rem; /* Tamanho do ícone dentro do botão */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(2, 7.5rem); /* 120px */
+  grid-gap: 2.8125rem; /* 45px */
+}
+
+.icon {
+  width: 7.5rem; /* 120px */
+  height: 7.5rem; /* 120px */
+  background-color: #e1e1e6;
+  border-radius: 0.75rem; /* 12px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone em 20% */
+  background-color: #007f969c;
+}
+
+.icon img {
+  width: 3.125rem; /* 50px */
+  height: 3.125rem; /* 50px */
+}
+
+.icon.selected {
+  background-color: #66b5c7;
+}
+
+.icon.selected img {
+  filter: invert(1);
+}
+
+@media screen and (min-width: 12.5rem) /* 200px */ and (max-width: 50rem) /* 800px */ {
+  .container-app {
+    min-width: 25rem; /* 400px */
+    font-size: 2rem;
+    display: grid;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .controls {
+    justify-content: center;
+    align-items: center;
+  }
+}

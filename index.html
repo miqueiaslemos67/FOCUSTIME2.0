@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Temporizador estilo Pomodoro" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>FOCUSTIMER 2.0 - POMODORO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="container-app">
+      <div class="timer">
+        <section id="timer" class="flex">
+          <span id="minutes">25</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+        <div class="controls">
+          <button id="play" class="btn">&#9654;</button>
+          <button id="stop" class="btn">&#9632;</button>
+          <button id="increase" class="btn">+</button>
+          <button id="decrease" class="btn">-</button>
+        </div>
+      </div>
+      <div class="icons">
+        <div id="forest" class="icon">
+          <img src="./assets/icon.png" alt="Floresta" />
+        </div>
+        <div id="rain" class="icon">
+          <img src="./assets/rain.png" alt="Chuva" />
+        </div>
+        <div id="coffee" class="icon">
+          <img src="./assets/Vector.png" alt="Cafeteria" />
+        </div>
+        <div id="fireplace" class="icon">
+          <img src="./assets/fire.png" alt="Lareira" />
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
